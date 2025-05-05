@@ -1,0 +1,139 @@
+html{
+    margin: 0 20px 0 20px;
+}
+.Ex{
+    font-size: 12px;
+}
+.Ex h1{
+    font-weight: bold;
+    font-size: x-large;
+    text-decoration: underline orange;
+}
+.Ex .Consigne{
+    border: 2px solid rgb(18, 103, 10);
+        /* Une bordure noire de 2px */
+    padding: 5px;
+        /* Espace entre le texte et la bordure */
+    display: inline-block;
+        /* S'assurer que la bordure s'adapte au texte */
+    margin: 0 20px;
+            /* Décalage de 20px à droite et à gauche */
+}
+.Ex p{
+    text-decoration: underline rgb(149, 18, 112);
+    color: rgb(228, 7, 228);
+}
+.Ex ol,ul {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.EX b, em{
+    font-family: fantasy;
+    text-decoration: underline;
+}
+.EX .select{
+    font-style: oblique;
+}
+
+
+
+Le problème vient de ton sélecteur CSS pour le lien dans .Resultat. Il y a une erreur dans le sélecteur : tu as écrit ..Resultat a avec deux points au début, ce qui n'est pas valide en CSS.
+
+Voici comment corriger le sélecteur et résoudre ton problème :
+Correction du CSS
+
+Modifie cette partie :
+
+..Resultat a {
+    color: blue;
+    text-decoration: underline;
+}
+
+en :
+
+.Resultat a {
+    color: blue;
+    text-decoration: underline;
+}
+
+Explication
+
+    En CSS, un sélecteur de classe commence par un seul point (.).
+    Le double point .. n’est pas valide et sera ignoré par le navigateur, donc aucun style ne s’applique aux liens dans .Resultat.
+
+Vérifie l'HTML et les balises
+
+Si le lien est toujours en dehors de la bordure après la correction, vérifie que toutes les balises ouvrantes et fermantes sont correctement placées.
+
+Voici une version propre et corrigée de ton HTML :
+
+<span class="Resultat">
+    <p>Mes passions :</p>
+    <ul> 
+        <li>Les animaux</li>
+        <li>Les arts créatifs</li>
+        <li>Le code</li>
+    </ul><br>
+    <p>Souffle-au-fromage :</p>
+    <ol> 
+        <li><b class="etape">Étape 1: </b>
+            <span class="a_faire">Préchauffez le four th.6 (180°C).</span>
+        </li>
+        <li><b class="etape">Étape 2: </b>
+            <span class="a_faire">Dans une casserole, faites un roux en faisant fondre le beurre...</span>
+        </li>
+        <li><b class="etape">Étape 3: </b>
+            <span class="a_faire">Battez les blancs en neige très ferme.</span>
+        </li>
+        <li><b class="etape">Étape 4: </b>
+            <span class="a_faire">Beurrez et farinez le moule à soufflé...</span>
+        </li>
+    </ol>
+    <p>Et le lien pour en savoir plus... 
+        <a href="https://www.cuisineaz.com/recettes/souffle-au-fromage-facile-et-rapide-50444.aspx#preparation" target="_blank">
+            Souffle-au-fromage
+        </a>
+    </p>
+</span>
+
+Autre vérification CSS
+
+Si le problème persiste, il peut être dû à l'overflow ou aux marges des éléments internes. Assure-toi que le conteneur .Resultat englobe bien tout avec ces styles :
+
+.Resultat {
+    border: 3px solid brown;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 0 auto;
+    overflow: hidden; /* Empêche les débordements */
+    max-width: 90%; /* S'assure que tout reste dans une largeur raisonnable */
+    box-sizing: border-box; /* Inclut padding dans la taille totale */
+}
+.Resultat p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+.Resultat em, b{
+    color: rgb(33, 92, 196);
+    text-decoration: underline brown;
+}
+.Resultat #apprend{
+    color: darkviolet;
+
+}
+.Resultat .a_faire, .etape {
+    font-family:'Times New Roman', Times, serif;
+    color: black;
+    font-size: small;
+    text-decoration: none;
+
+}
+.Resultat .etape {
+    font-style: italic;
+    text-decoration: underline dotted orangered;
+}
+.Resultat a {
+    color: blue;
+    text-decoration: underline;
+}

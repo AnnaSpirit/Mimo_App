@@ -1,0 +1,102 @@
+html {
+    margin: 0 30px 0 30px;
+}
+
+.Ex {
+    font-size: 12px;
+}
+
+.Ex h1 {
+    font-weight: bold;
+    font-size: x-large;
+    text-decoration: underline orange;
+}
+
+.Ex .Consigne {
+    border: 2px solid rgb(18, 103, 10);
+    /* Une bordure de 2px */
+    padding: 10px;
+    /* Espace entre le texte et la bordure */
+    display: block;
+    /* S'assurer que la bordure s'adapte au texte */
+    margin: 0 0 0 30px;
+    /* Décalage de 20px à droite */
+}
+
+.Ex p {
+    text-decoration: underline rgb(149, 18, 112);
+    color: rgb(228, 7, 228);
+}
+
+.Ex ol,
+ul {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.EX b,
+em {
+    font-family: fantasy;
+    text-decoration: underline;
+}
+
+.EX .select {
+    font-style: oblique;
+}
+
+
+
+.Resultat {
+    border: 3px solid brown;
+    /* Une bordure noire de 2px */
+    padding: 20px;
+    /* Espace entre le texte et la bordure */
+    border-radius: 10px;
+    /* Coins arrondis */
+    display: block;
+    /* S'assurer que la bordure s'adapte au texte */
+    margin-left: 100px;
+}
+
+.Resultat p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: firebrick;
+}
+
+.Resultat em,
+b {
+    color: rgb(33, 92, 196);
+    text-decoration: underline brown;
+}
+
+.Resultat #apprend {
+    color: darkviolet;
+
+}
+
+.Resultat .a_faire,
+.etape {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-size: small;
+    text-decoration: none;
+}
+
+.Resultat .etape {
+    font-style: italic;
+    text-decoration: underline dotted orangered;
+}
+
+.Resultat a {
+    color: blue;
+    text-decoration: ;
+}
+
+.square {
+    list-style-type: square;
+}
+
+.Resultat ol {
+    list-style-type: upper-roman;
+}

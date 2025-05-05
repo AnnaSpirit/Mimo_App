@@ -1,0 +1,32 @@
+h1{
+    font-weight: bold;
+    font-size: x-large;
+    text-decoration: underline orange;
+}
+.Consigne{
+    border: 2px solid blue;
+    /* Une bordure noire de 2px */
+    padding: 20px;
+    /* Espace entre le texte et la bordure */
+    border-radius: 10px;
+    /* Coins arrondis */
+    display: inline-block;
+    /* S'assurer que la bordure s'adapte au texte */
+    margin: 0
+    * Décalage de 20px à droite et à gauche */
+            }
+    }
+.Resultat{
+    border: 1px solid olive;
+        /* Une bordure noire de 2px */
+        padding: 5px;
+        /* Espace entre le texte et la bordure */
+        display: inline-block;
+        /* S'assurer que la bordure s'adapte au texte */
+        margin: 0 20px;
+            /* Décalage de 20px à droite et à gauche */
+        }
+ol{
+    margin-top: 5px;
+    margin-bottom: 0;
+}
