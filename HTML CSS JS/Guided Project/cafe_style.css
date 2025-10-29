@@ -1,0 +1,34 @@
+.header {
+    text-align: center;
+    color: #5A2D0C;
+    background-color: #FFEBCD;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.menu-list {
+    list-style: none;
+    /* retire les puces par défaut */
+    padding: 20px;
+    background-color: lavender;
+    font-size: 20px;
+}
+
+.menu-list li {
+    position: relative;
+    margin-left: 40px;
+    /* espace pour laisser la place à l'icône */
+    padding-bottom: 10px;
+}
+
+.menu-list li::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    background-image: url("https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/2615.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
