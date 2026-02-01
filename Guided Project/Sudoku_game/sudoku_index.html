@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sudoku_style.css">
+    <title>Sudoku_game</title>
+</head>
+
+<body>
+    <h2>Sudoku Puzzle</h2>
+    <div class="grid-container">
+        <div class="grid-item" data-index="0" tabindex="0">N</div>
+        <div class="grid-item" data-index="1" tabindex="0">N</div>
+        <div class="grid-item" data-index="2" tabindex="0">N</div>
+        <div class="grid-item" data-index="3" tabindex="0">N</div>
+        <div class="grid-item" data-index="4" tabindex="0">N</div>
+        <div class="grid-item" data-index="14" data-given>7</div>
+        <div class="grid-item" data-index="6" tabindex="0">N</div>
+        <div class="grid-item" data-index="7" tabindex="0">N</div>
+        <div class="grid-item" data-index="8" tabindex="0">N</div>
+        <div class="grid-item" data-index="9" tabindex="0">N</div>
+        <div class="grid-item" data-index="10" tabindex="0">N</div>
+        <div class="grid-item" data-index="11" tabindex="0">N</div>
+        <div class="grid-item" data-index="12" tabindex="0">N</div>
+        <div class="grid-item" data-index="13" tabindex="0">N</div>
+        <div class="grid-item" data-index="14" tabindex="0">N</div>
+        <div class="grid-item" data-index="15" tabindex="0">N</div>
+        <div class="grid-item" data-index="16" tabindex="0">N</div>
+        <div class="grid-item" data-index="17" tabindex="0">N</div>
+        <div class="grid-item" data-index="18" tabindex="0">N</div>
+        <div class="grid-item" data-index="14" data-given>9</div>
+        <div class="grid-item" data-index="20" tabindex="0">N</div>
+        <div class="grid-item" data-index="21" tabindex="0">N</div>
+        <div class="grid-item" data-index="22" tabindex="0">N</div>
+        <div class="grid-item" data-index="23" tabindex="0">N</div>
+        <div class="grid-item" data-index="24" tabindex="0">N</div>
+        <div class="grid-item" data-index="25" tabindex="0">N</div>
+        <div class="grid-item" data-index="26" tabindex="0">N</div>
+        <div class="grid-item" data-index="27" tabindex="0">N</div>
+        <div class="grid-item" data-index="28" tabindex="0">N</div>
+        <div class="grid-item" data-index="29" tabindex="0">N</div>
+        <div class="grid-item" data-index="30" tabindex="0">N</div>
+        <div class="grid-item" data-index="31" tabindex="0">N</div>
+        <div class="grid-item" data-index="32" tabindex="0">N</div>
+        <div class="grid-item" data-index="33" tabindex="0">N</div>
+        <div class="grid-item" data-index="34" tabindex="0">N</div>
+        <div class="grid-item" data-index="35" tabindex="0">N</div>
+        <div class="grid-item" data-index="36" tabindex="0">N</div>
+        <div class="grid-item" data-index="37" tabindex="0">N</div>
+        <div class="grid-item" data-index="38" tabindex="0">N</div>
+        <div class="grid-item" data-index="39" tabindex="0">N</div>
+        <div class="grid-item" data-index="40" tabindex="0">N</div>
+        <div class="grid-item" data-index="41" tabindex="0">N</div>
+        <div class="grid-item" data-index="42" tabindex="0">N</div>
+        <div class="grid-item" data-index="43" tabindex="0">N</div>
+        <div class="grid-item" data-index="44" tabindex="0">N</div>
+        <div class="grid-item" data-index="45" tabindex="0">N</div>
+        <div class="grid-item" data-index="46" tabindex="0">N</div>
+        <div class="grid-item" data-index="47" tabindex="0">N</div>
+        <div class="grid-item" data-index="48" tabindex="0">N</div>
+        <div class="grid-item" data-index="49" tabindex="0">N</div>
+        <div class="grid-item" data-index="50" tabindex="0">N</div>
+        <div class="grid-item" data-index="51" tabindex="0">N</div>
+        <div class="grid-item" data-index="52" tabindex="0">N</div>
+        <div class="grid-item" data-index="53" tabindex="0">N</div>
+        <div class="grid-item" data-index="54" tabindex="0">N</div>
+        <div class="grid-item" data-index="55" tabindex="0">N</div>
+        <div class="grid-item" data-index="56" tabindex="0">N</div>
+        <div class="grid-item" data-index="57" tabindex="0">N</div>
+        <div class="grid-item" data-index="58" tabindex="0">N</div>
+        <div class="grid-item" data-index="59" tabindex="0">N</div>
+        <div class="grid-item" data-index="60" tabindex="0">N</div>
+        <div class="grid-item" data-index="61" tabindex="0">N</div>
+        <div class="grid-item" data-index="62" tabindex="0">N</div>
+        <div class="grid-item" data-index="63" tabindex="0">N</div>
+        <div class="grid-item" data-index="64" tabindex="0">N</div>
+        <div class="grid-item" data-index="65" tabindex="0">N</div>
+        <div class="grid-item" data-index="66" tabindex="0">N</div>
+        <div class="grid-item" data-index="67" tabindex="0">N</div>
+        <div class="grid-item" data-index="68" tabindex="0">N</div>
+        <div class="grid-item" data-index="69" tabindex="0">N</div>
+        <div class="grid-item" data-index="70" tabindex="0">N</div>
+        <div class="grid-item" data-index="71" tabindex="0">N</div>
+        <div class="grid-item" data-index="72" tabindex="0">N</div>
+        <div class="grid-item" data-index="73" tabindex="0">N</div>
+        <div class="grid-item" data-index="74" tabindex="0">N</div>
+        <div class="grid-item" data-index="75" tabindex="0">N</div>
+        <div class="grid-item" data-index="76" tabindex="0">N</div>
+        <div class="grid-item" data-index="77" tabindex="0">N</div>
+        <div class="grid-item" data-index="78" tabindex="0">N</div>
+        <div class="grid-item" data-index="14" data-given>1</div>
+        <div class="grid-item" data-index="80" tabindex="0">N</div>
+
+    </div>
+
+    </div>
+</body>
+
+</html>

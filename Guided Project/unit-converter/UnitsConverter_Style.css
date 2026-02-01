@@ -1,0 +1,19 @@
+body {
+    background-color: #00E0E0;
+    padding: 20px;
+}
+
+h1 {
+    padding: 25px;
+    background-color: whitesmoke;
+    border-radius: 35px;
+}
+
+p {
+    background-color: rgb(250, 228, 116);
+    color: #9E0059);
+    border-radius: 12px;
+    width: 400px;
+    height: 20px;
+    padding: 18px;
+}

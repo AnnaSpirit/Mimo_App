@@ -1,0 +1,75 @@
+/* === Global === */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #10A0D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* === Main container === */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* === Titles === */
+h1 {
+    color: #5A1DD7;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* === Choices buttons === */
+#choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #5A1DD7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover:not(:disabled) {
+    background-color: #10A0D0;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* === Result message === */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFB70A;
+}
+
+/* number of questions */
+#question_counter {
+    text-align: right;
+    font-size: 14px;
+    color: #5A1DD7;
+    margin-top: 10px;
+}

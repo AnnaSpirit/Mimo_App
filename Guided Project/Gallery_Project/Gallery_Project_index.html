@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Gallery_Project_style.css">
+    <script src="Gallery_Project_script.js" defer></script>
+    <title>Gallery_Project</title>
+</head>
+
+<body>
+    <h1>Cats</h1>
+    <div class="gallery">
+        <div class="item">
+            <img src="https://mimo.app/i/whispurr.png" alt="Whispurr" class="thumbnail" onclick="showModal(this)" />
+            <h2>Whispurr</h2>
+            <p>A mysterious cat with a soft whispering purr.</p>
+        </div>
+        <div class="item">
+            <img src="https://mimo.app/i/babaganoosh.png" alt="Babaganoosh" class="thumbnail"
+                onclick="showModal(this)" />
+            <h2>Babaganoosh</h2>
+            <p>A cozy little cat with wide eyes and a mischievous curiosity.</p>
+        </div>
+        <div class="item">
+            <img src="https://mimo.app/i/nacho.png" alt="Nacho" class="thumbnail" onclick="showModal(this)" />
+            <h2>Nacho</h2>
+            <p>A laid-back adventurer, always ready for a surprise nap</p>
+        </div>
+    </div>
+
+    <div id="modal">
+        <span id="modal-close-button">×</span>
+        <img id="modal-content" src="" alt="">
+    </div>
+</body>
+
+</html>
