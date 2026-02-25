@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Todo_style.css">
+    <script src="Todo_script.js" defer></script>
+    <title>To do list application</title>
+</head>
+
+<body>
+    <h1> Todo List</h1>
+    <div class="lines">
+        <ul id="todos-container">
+        </ul>
+    </div>
+    <p>Add items on the list, you can click on an item to check it off</p>
+    <div id="container">
+        <input id="note" type="text" placeholder="Add something" />
+        <button type="button" onclick="createTodo()">Add</button>
+        <button type="button" onclick="deleteTodos()">Delete all</button>
+    </div>
+</body>
+
+</html>
