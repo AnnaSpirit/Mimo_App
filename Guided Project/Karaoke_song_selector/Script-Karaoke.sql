@@ -1,0 +1,105 @@
+--CREATE TABLE songs (
+--    id SERIAL PRIMARY KEY,
+--    title TEXT,
+--    artist TEXT,
+--    mood TEXT,
+--    duration INTEGER,
+--    released INTEGER
+--);
+--
+--INSERT INTO songs (title, artist, mood, duration, released)
+--VALUES ('Bohemian Rhapsody', 'Queen', 'epic', 60, 1975);
+--
+--INSERT INTO songs (title, artist, mood, duration, released)
+--VALUES ('Let it go', 'Idina Menzel', 'epic', 227, 2013);
+--
+--INSERT INTO songs (title, artist, mood, duration, released)
+--VALUES ('I will survive', 'Gloria Gaynor', 'epic', 198, 1978);
+--
+--INSERT INTO songs (title, artist, mood, duration, released)
+--VALUES ('Twist and Shout', 'The Beatles', 'happy', 152, 1963);
+--
+--INSERT INTO songs (title, artist, mood, duration, released)
+--VALUES ('La Bamba', 'Ritchie Valens', 'happy', 166, 1958);
+
+--INSERT INTO songs (title, artist, mood, duration, released)
+--VALUES ('I will always love you', 'Whitney Houston', 'epic', 273, 1992);
+--
+--INSERT INTO songs (title, artist, mood, duration, released)
+--VALUES ('Sweet Caroline', 'Neil Diamond', 'happy', 201, 1969);
+--
+--INSERT INTO songs (title, artist, mood, duration, released)
+--VALUES ('Call me maybe', 'Carly Rae Jepsen', 'happy', 193, 2011);
+
+--drop table songs
+
+SELECT * FROM songs;
+--SELECT title FROM songs;
+--SELECT title FROM songs WHERE mood = 'epic' OR  released > 1990;
+--DELETE FROM songs WHERE id = 2;
+
+--SELECT title FROM songs WHERE mood = 'epic' OR  released > 1990;
+
+--SELECT title FROM songs WHERE mood = 'epic' AND  released > 1990 AND duration < 240;
+--
+--INSERT INTO songs (title, artist, mood, duration, released)
+--VALUES
+--('Billie Jean', 'Michael Jackson', 'epic', 294, 1982),
+--('Thriller', 'Michael Jackson', 'epic', 358, 1982),
+--('Like a Prayer', 'Madonna', 'epic', 347, 1989),
+--('Rolling in the Deep', 'Adele', 'epic', 228, 2010),
+--('Someone Like You', 'Adele', 'epic', 285, 2011),
+--('Shake It Off', 'Taylor Swift', 'happy', 242, 2014),
+--('Happy', 'Pharrell Williams', 'happy', 233, 2013),
+--('Uptown Funk', 'Mark Ronson', 'happy', 270, 2014),
+--('Dancing Queen', 'ABBA', 'happy', 230, 1976),
+--('Take on Me', 'A-ha', 'happy', 225, 1985),
+--('Africa', 'Toto', 'epic', 295, 1982),
+--('Eye of the Tiger', 'Survivor', 'epic', 245, 1982),
+--('Livin on a Prayer', 'Bon Jovi', 'epic', 249, 1986),
+--('Smells Like Teen Spirit', 'Nirvana', 'epic', 301, 1991),
+--('Wonderwall', 'Oasis', 'epic', 258, 1995),
+--('Hotel California', 'Eagles', 'epic', 390, 1976),
+--('Imagine', 'John Lennon', 'epic', 183, 1971),
+--('Hey Jude', 'The Beatles', 'epic', 431, 1968),
+--('We Will Rock You', 'Queen', 'epic', 122, 1977),
+--('We Are the Champions', 'Queen', 'epic', 179, 1977),
+--('I Gotta Feeling', 'Black Eyed Peas', 'happy', 289, 2009),
+--('Firework', 'Katy Perry', 'epic', 228, 2010),
+--('Roar', 'Katy Perry', 'happy', 223, 2013),
+--('Counting Stars', 'OneRepublic', 'happy', 257, 2013),
+--('Blinding Lights', 'The Weeknd', 'happy', 200, 2019),
+--('Shape of You', 'Ed Sheeran', 'happy', 233, 2017),
+--('Perfect', 'Ed Sheeran', 'epic', 263, 2017),
+--('Bad Guy', 'Billie Eilish', 'happy', 194, 2019),
+--('Stay', 'The Kid LAROI', 'happy', 141, 2021),
+--('Levitating', 'Dua Lipa', 'happy', 203, 2020),
+--('Dont Stop Believin', 'Journey', 'epic', 251, 1981),
+--('Sweet Child O Mine', 'Guns N Roses', 'epic', 356, 1987),
+--('Back in Black', 'ACDC', 'epic', 255, 1980),
+--('Another One Bites the Dust', 'Queen', 'happy', 215, 1980),
+--('September', 'Earth Wind and Fire', 'happy', 215, 1978),
+--('Stayin Alive', 'Bee Gees', 'happy', 285, 1977),
+--('I Want to Hold Your Hand', 'The Beatles', 'happy', 145, 1963),
+--('Hound Dog', 'Elvis Presley', 'happy', 136, 1956),
+--('Johnny B Goode', 'Chuck Berry', 'happy', 161, 1958),
+--('Respect', 'Aretha Franklin', 'epic', 149, 1967),
+--('Girls Just Want to Have Fun', 'Cyndi Lauper', 'happy', 238, 1983),
+--('Take My Breath Away', 'Berlin', 'epic', 269, 1986),
+--('Nothing Else Matters', 'Metallica', 'epic', 388, 1991),
+--('Losing My Religion', 'R.E.M.', 'epic', 269, 1991),
+--('Viva La Vida', 'Coldplay', 'epic', 242, 2008),
+--('Paradise', 'Coldplay', 'epic', 278, 2011),
+--('Clocks', 'Coldplay', 'epic', 307, 2002),
+--('Yellow', 'Coldplay', 'epic', 266, 2000),
+--('Radioactive', 'Imagine Dragons', 'epic', 186, 2012),
+--('Believer', 'Imagine Dragons', 'epic', 204, 2017);
+
+--SELECT COUNT(*) FROM songs;
+--
+--SELECT (released/10)*10 AS decade, COUNT(*)
+--FROM songs
+--GROUP BY decade
+--ORDER BY decade;
+
+
