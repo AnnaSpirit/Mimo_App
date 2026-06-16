@@ -1,3 +1,4 @@
+
 class Pet {
     constructor(id) {
         this.id = id;
@@ -25,11 +26,36 @@ class Pet {
 }
 
 let pet1 = new Pet(1);
+let pet2 = new Pet(2);
+
+let selectedPet = null;
+let pet1Element = document.getElementById("pet1");
+let pet2Element = document.getElementById("pet2");
+
+function selectPet(id) {
+    selectedPet = id;
+
+    pet1Element.classList.remove("selected");
+    pet2Element.classList.remove("selected");
+
+    if (id === 1) {
+        pet1Element.classList.add("selected");
+    } else if (id === 2) {
+        pet2Element.classList.add("selected");
+    }
+}
 
 function feedPet(amount) {
-    pet1.feed(amount);
+    if (selectedPet === 1) {
+        pet1.feed(amount);
+    } else if (selectedPet === 2) {
+        pet2.feed(amount);
+    }
 }
 
 setInterval(() => {
     pet1.decreaseFedLevel();
+    pet2.decreaseFedLevel();
 }, 5000);
+
+selectPet(1);
