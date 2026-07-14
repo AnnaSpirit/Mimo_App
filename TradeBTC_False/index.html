@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoTrade Pro - Plateforme de Trading</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path d="M8 24L16 8L24 16" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <h1>CryptoTrade Pro</h1>
+                </div>
+
+                <nav class="nav-menu">
+                    <button class="nav-link">À propos</button>
+
+                    <div class="language-select">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="8" cy="8" r="7" stroke="#9ca3af" stroke-width="1" />
+                            <path d="M8 1V15M1 8H15" stroke="#9ca3af" stroke-width="1" />
+                        </svg>
+                        <select id="language">
+                            <option value="fr">FR</option>
+                            <option value="en">EN</option>
+                            <option value="es">ES</option>
+                            <option value="de">DE</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-login">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path
+                                d="M13 1H15C15.5304 1 16.0391 1.21071 16.4142 1.58579C16.7893 1.96086 17 2.46957 17 3V15C17 15.5304 16.7893 16.0391 16.4142 16.4142C16.0391 16.7893 15.5304 17 15 17H13M6 13L13 6M13 6L6 1M13 6H1"
+                                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Login</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="container">
+            <!-- CHART SECTION -->
+            <div class="chart-section">
+                <h2>Tendance du Marché - Cryptomonnaies Principales</h2>
+                <div class="chart-container">
+                    <canvas id="marketChart"></canvas>
+                </div>
+            </div>
+
+            <!-- MARKET TABLE -->
+            <div class="market-section">
+                <h2>Cotations Marché - Actions et Devises</h2>
+                <div class="table-wrapper">
+                    <table class="market-table">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Dernier</th>
+                                <th>Variation %</th>
+                                <th>Volume</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="positive">
+                                <td class="asset-name">Schneider Electric</td>
+                                <td class="price">€273,10</td>
+                                <td class="change">+1,69 %</td>
+                                <td class="volume">898 158</td>
+                            </tr>
+                            <tr class="positive">
+                                <td class="asset-name">TotalEnergies SE</td>
+                                <td class="price">€71,20</td>
+                                <td class="change">+1,11 %</td>
+                                <td class="volume">3,19 Mns</td>
+                            </tr>
+                            <tr class="negative">
+                                <td class="asset-name">Safran</td>
+                                <td class="price">€327,80</td>
+                                <td class="change">-0,70 %</td>
+                                <td class="volume">476 984</td>
+                            </tr>
+                            <tr class="negative">
+                                <td class="asset-name">LVMH</td>
+                                <td class="price">€482,95</td>
+                                <td class="change">-1,74 %</td>
+                                <td class="volume">293 665</td>
+                            </tr>
+                            <tr class="positive">
+                                <td class="asset-name">Airbus Group</td>
+                                <td class="price">€195,94</td>
+                                <td class="change">+0,34 %</td>
+                                <td class="volume">700 561</td>
+                            </tr>
+                            <tr class="negative">
+                                <td class="asset-name">Sanofi</td>
+                                <td class="price">€75,50</td>
+                                <td class="change">-2,08 %</td>
+                                <td class="volume">1,70 Mns</td>
+                            </tr>
+                            <tr class="positive">
+                                <td class="asset-name">STMicroelectronics</td>
+                                <td class="price">€45,30</td>
+                                <td class="change">+2,45 %</td>
+                                <td class="volume">2,34 Mns</td>
+                            </tr>
+                            <tr class="positive">
+                                <td class="asset-name">BTC/EUR</td>
+                                <td class="price">€49,100</td>
+                                <td class="change">+2,40 %</td>
+                                <td class="volume">15,7M</td>
+                            </tr>
+                            <tr class="positive">
+                                <td class="asset-name">ETH/EUR</td>
+                                <td class="price">€2,850</td>
+                                <td class="change">+1,80 %</td>
+                                <td class="volume">8,2M</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL ALERTE -->
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-content">
+                <svg class="alert-icon" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                    <circle cx="28" cy="28" r="25" stroke="#ef4444" stroke-width="2" />
+                    <path d="M28 18V28M28 36H28.02" stroke="#ef4444" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <h3>Accès Indisponible</h3>
+                <p>Cette plateforme n'accepte plus de nouveaux clients pour le moment.</p>
+                <button class="btn-close" id="closeBtn">Fermer</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>À Propos</h4>
+                    <p>Plateforme de trading crypto et actions professionnelle et sécurisée</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Conditions</h4>
+                    <ul>
+                        <li><a href="#">CGU</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <p>Aide en ligne disponible 24h/24</p>
+                    <p>Centre d'assistance: <a href="#">Consulter</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 CryptoTrade Pro. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Chart.js configuration
+        const ctx = document.getElementById('marketChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00', '23:59'],
+                datasets: [
+                    {
+                        label: 'BTC/EUR',
+                        data: [45000, 46200, 44800, 47500, 48200, 46800, 49100],
+                        borderColor: '#3b82f6',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        borderWidth: 2,
+                        tension: 0.4,
+                        fill: false,
+                        pointRadius: 0
+                    },
+                    {
+                        label: 'ETH/EUR',
+                        data: [2650, 2700, 2720, 2800, 2820, 2850, 2900],
+                        borderColor: '#10b981',
+                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                        borderWidth: 2,
+                        tension: 0.4,
+                        fill: false,
+                        pointRadius: 0
+                    },
+                    {
+                        label: 'SOL/EUR',
+                        data: [98, 102, 105, 110, 115, 118, 122],
+                        borderColor: '#f59e0b',
+                        backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                        borderWidth: 2,
+                        tension: 0.4,
+                        fill: false,
+                        pointRadius: 0
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        labels: {
+                            color: '#d1d5db',
+                            font: { size: 12 }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        ticks: { color: '#9ca3af' },
+                        grid: { color: '#374151' }
+                    },
+                    x: {
+                        ticks: { color: '#9ca3af' },
+                        grid: { color: '#374151' }
+                    }
+                }
+            }
+        });
+
+        // Modal management
+        const modalOverlay = document.getElementById('modalOverlay');
+        const closeBtn = document.getElementById('closeBtn');
+
+        // Fermer la modal quand on clique sur le bouton Fermer
+        closeBtn.addEventListener('click', () => {
+            modalOverlay.style.display = 'none';
+        });
+
+        // Réafficher la modal quand on clique n'importe où après sa fermeture
+        document.addEventListener('click', (event) => {
+            // Ne pas réafficher si on clique sur le bouton Fermer
+            if (event.target === closeBtn) {
+                return;
+            }
+            // Réafficher la modal si elle est cachée
+            if (modalOverlay.style.display === 'none') {
+                modalOverlay.style.display = 'flex';
+            }
+        });
+    </script>
+</body>
+
+</html>

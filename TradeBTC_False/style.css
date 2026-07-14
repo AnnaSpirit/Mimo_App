@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #030712;
+    color: #f3f4f6;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 24px;
+}
+
+/* HEADER */
+.header {
+    background-color: #111827;
+    border-bottom: 1px solid #1f2937;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-link {
+    background: none;
+    border: none;
+    color: #d1d5db;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #60a5fa;
+}
+
+.language-select {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    padding: 8px 12px;
+    transition: border-color 0.3s ease;
+}
+
+.language-select:hover {
+    border-color: #3b82f6;
+}
+
+.language-select select {
+    background: transparent;
+    border: none;
+    color: #f3f4f6;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+.language-select select option {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+.btn-login {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #2563eb;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #1d4ed8;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    flex: 1;
+    position: relative;
+}
+
+/* CHART SECTION */
+.chart-section {
+    background-color: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 8px;
+    padding: 32px;
+    margin: 48px 0 48px 0;
+}
+
+.chart-section h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.chart-container {
+    position: relative;
+    height: 250px;
+    width: 100%;
+}
+
+.chart-container canvas {
+    max-height: 250px !important;
+    max-width: 100% !important;
+}
+
+/* MARKET TABLE SECTION */
+.market-section {
+    background-color: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+.market-section h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.market-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.market-table thead {
+    background-color: #0f172a;
+    border-bottom: 2px solid #1f2937;
+}
+
+.market-table th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #9ca3af;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.market-table td {
+    padding: 16px 12px;
+    border-bottom: 1px solid #1f2937;
+    font-size: 14px;
+}
+
+.market-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.market-table tbody tr:hover {
+    background-color: #1f2937;
+}
+
+.asset-name {
+    font-weight: 600;
+    color: #f3f4f6;
+}
+
+.price {
+    font-weight: 600;
+    color: #60a5fa;
+    font-size: 15px;
+}
+
+.change {
+    font-weight: 600;
+}
+
+.market-table tr.positive .change {
+    color: #10b981;
+}
+
+.market-table tr.negative .change {
+    color: #ef4444;
+}
+
+.volume {
+    color: #9ca3af;
+}
+
+/* MODAL */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    padding: 16px;
+}
+
+.modal-content {
+    background-color: #111827;
+    border: 2px solid #ef4444;
+    border-radius: 8px;
+    padding: 40px;
+    max-width: 448px;
+    width: 100%;
+    text-align: center;
+}
+
+.alert-icon {
+    margin: 0 auto 24px;
+    display: block;
+}
+
+.modal-content h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ef4444;
+    margin-bottom: 16px;
+}
+
+.modal-content p {
+    color: #d1d5db;
+    font-size: 16px;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.btn-close {
+    background-color: #dc2626;
+    border: none;
+    color: white;
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-close:hover {
+    background-color: #b91c1c;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #111827;
+    border-top: 1px solid #1f2937;
+    margin-top: 48px;
+    padding: 40px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 32px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.footer-section p {
+    color: #9ca3af;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #60a5fa;
+}
+
+.footer-bottom {
+    border-top: 1px solid #1f2937;
+    padding-top: 24px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .nav-menu {
+        gap: 16px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .chart-section {
+        padding: 16px;
+        margin: 24px 0 48px 0;
+    }
+
+    .market-section {
+        padding: 16px;
+    }
+
+    .market-table th,
+    .market-table td {
+        padding: 8px 4px;
+        font-size: 12px;
+    }
+
+    .modal-content {
+        padding: 24px;
+    }
+}

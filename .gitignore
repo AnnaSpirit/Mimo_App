@@ -17,6 +17,7 @@
 *.docx
 *.xlsx
 *.mp4
+*.pdf
 
 # Ignore fichier system
 
